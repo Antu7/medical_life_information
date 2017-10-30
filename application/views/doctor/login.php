@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Medical Life | </title>
+
+    <!-- Bootstrap -->
+    <link href="<?php echo base_url() ?>assets/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="<?php echo base_url() ?>assets/vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <!-- NProgress -->
+    <link href="<?php echo base_url() ?>assets/vendors/nprogress/nprogress.css" rel="stylesheet">
+    <!-- Animate.css -->
+    <link href="<?php echo base_url() ?>assets/vendors/animate.css/animate.min.css" rel="stylesheet">
+
+    <!-- Custom Theme Style -->
+    <link href="<?php echo base_url() ?>assets/build/css/custom.min.css" rel="stylesheet">
+</head>
+
+<body class="login">
+<div>
+    <a class="hiddenanchor" id="signup"></a>
+    <a class="hiddenanchor" id="signin"></a>
+
+    <div class="login_wrapper">
+        <div class="animate form login_form">
+            <section class="login_content">
+                <form action="<?php echo base_url() ?>doctor/Doctor_login_controllers/login_check" method="post">
+                    <h1>Doctor Login </h1>
+                    <div>
+                        <input type="email" name="doctor_email" class="form-control" placeholder="Email"/>
+                    </div>
+                    <div>
+                        <input type="password" name="doctor_password" class="form-control" placeholder="Password"
+                        />
+                    </div>
+                    <div>
+                        <input class="btn btn-default submit" type="submit" value="Submit">
+                        <input class="btn btn-default submit" type="reset" value="Reset">
+
+                    </div>
+
+                    <div class="clearfix"></div>
+
+                </form>
+                <?php
+                $session_data = $this->session->userdata('message');
+                if ($session_data) {
+                    echo $session_data;
+                    $this->session->unset_userdata('message');
+                }
+                ?>
+
+                <div class="separator">
+                    <p class="change_link">New to site?
+                        <a href="<?php echo base_url() ?>Welcome/doctor_registration" class="to_register"
+                           style="color: #00A000"> Create Account </a>
+                    </p>
+
+                    <div class="clearfix"></div>
+                    <br/>
+
+					<div>
+						<h1><i class="fa fa-heartbeat"></i><a href="<?php echo base_url() ?>Welcome"> Medical Life!</h1>
+						<p>©2016 All Rights Reserved. Git Antu7</p>
+					</div>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>
+</body>
+</html>
