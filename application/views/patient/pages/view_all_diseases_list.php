@@ -105,7 +105,7 @@ Data table start
 								<form
 									action="<?php echo base_url() ?>patient/Patient_diseases_controllers/change_diseases_status "
 									method="post">
-									<input type="hidden" value="<?php echo $information->patient_id ?>" name="patient_id">
+									<input type="hidden" value="<?php echo $information->diseases_id ?>" name="diseases_id">
 									<button type="submit" value="0" name="diseases_status" class="label label-danger"
 											onclick="return checkDelete();">Diseases I
 										Have

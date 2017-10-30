@@ -32,9 +32,9 @@ class Patient_diseases_model extends CI_Model
 
 	}
 
-	public function update_diseases_info($data, $patient_id)
+	public function update_diseases_info($data, $diseases_id)
 	{
-		$this->db->where('patient_id', $patient_id);
+		$this->db->where('diseases_id', $diseases_id);
 		$this->db->update('diseases', $data);
 	}
 

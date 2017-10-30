@@ -82,11 +82,11 @@ class Patient_diseases_controllers extends CI_Controller
 	public function change_diseases_status()
 	{
 		$data = array();
-		$patient_id = $this->input->post('patient_id');
+		$diseases_id = $this->input->post('diseases_id');
 		$data['diseases_status'] = $this->input->post('diseases_status', true);
 
 
-		$this->Patient_diseases_model->update_diseases_info($data, $patient_id);
+		$this->Patient_diseases_model->update_diseases_info($data, $diseases_id);
 
 		redirect('patient/Patient_view_controllers/view_all_diseases_list');
 	}
