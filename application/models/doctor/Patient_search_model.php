@@ -4,7 +4,7 @@ class Patient_search_model extends CI_Model
 {
 	public function search_patient_email($patient)
 	{
-		$this->db->like('patient_email', $patient);
+		$this->db->where('patient_email', $patient);
 		$query = $this->db->get('patient');
 		return $query->result();
 	}
